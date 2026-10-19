@@ -1,1 +1,138 @@
 /*  your css code here. If applicable */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 0 15px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 42px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+}
+
+#player-form {
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.player-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.player-input label {
+    width: 85px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.player-input input {
+    flex: 1;
+    min-width: 0;
+    height: 50px;
+    border: 2px solid #222;
+    padding: 8px 12px;
+    font-size: 23px;
+}
+
+#submit {
+    display: block;
+    width: 80%;
+    margin: 30px auto 0;
+    padding: 12px;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 7px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background: #f5f5f5;
+}
+
+#game h1 {
+    margin-bottom: 25px;
+}
+
+.message {
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    min-height: 32px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(450px, 90vw);
+    height: min(450px, 90vw);
+    margin: 0 auto;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    border: 1px solid #222;
+    font-size: 75px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:hover {
+    background-color: #ffb6c1;
+}
+
+.cell:focus {
+    outline: 2px solid #555;
+    outline-offset: -3px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .player-input label {
+        width: 75px;
+        font-size: 18px;
+    }
+
+    .player-input input {
+        font-size: 18px;
+    }
+
+    #submit {
+        font-size: 21px;
+    }
+
+    .cell {
+        font-size: 55px;
+    }
+}
